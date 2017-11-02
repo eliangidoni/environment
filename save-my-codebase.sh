@@ -2,6 +2,10 @@
 
 if [ $# -eq 1 ]; then
     echo "Generating doxygen docs..."
+    which dot > /dev/null 2>&1
+    if [ $? -ne 0 ]; then
+        brew install graphviz;
+    fi
 else
     echo "$0 <project_path>"
     exit 1;

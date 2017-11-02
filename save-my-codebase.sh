@@ -1,15 +1,15 @@
-#!/usr/bin/env bash
+#!/bin/env bash
 
-if [ $# -eq 2 ]; then
+if [ $# -eq 1 ]; then
     echo "Generating doxygen docs..."
 else
-    echo "$0 <project_path> <output_dir>"
+    echo "$0 <project_path>"
     exit 1;
 fi
 
 PROJECT_PATH=$1
-OUTPUT_DIR=$2
 PROJECT_NAME=`basename $PROJECT_PATH`
+OUTPUT_DIR=${PROJECT_NAME}_code_reference
 
 cat <<EOF > doxygen_tmp.in
 PROJECT_NAME = ${PROJECT_NAME}
@@ -44,3 +44,9 @@ GENERATE_HTML = YES
 EOF
 
 cat doxygen_tmp.in && doxygen doxygen_tmp.in && rm doxygen_tmp.in;
+
+cat <<EOF > ${OUTPUT_DIR}/index.html
+<html><head><title>${PROJECT_NAME} code reference</title></head><body><p>Nice, bookmark this page !</p><p>See code for <a href=html/index.html>${PROJECT_NAME}</a></p></body></html>
+EOF
+
+open file://${PWD}/${OUTPUT_DIR}/index.html

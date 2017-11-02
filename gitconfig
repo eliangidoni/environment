@@ -1,0 +1,13 @@
+# Credential caching
+[credential]
+	helper = cache --timeout 60
+
+[user]
+	name = Elian Gidoni
+	email = elianmdp@gmail.com
+
+[push]
+	default = simple
+
+[alias]
+	tree = log --graph --pretty=format:'%Cred%h%Creset %Cgreen[%cr]%Creset (%an) %s%Creset %C(yellow)%d%Creset' --abbrev-commit --date=relative

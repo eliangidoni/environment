@@ -1,0 +1,15 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Anaconda",
+		"Emacs Pro Essentials",
+		"Function Name Display",
+		"Outline",
+		"Package Control",
+		"SublimeLinter"
+	]
+}

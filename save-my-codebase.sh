@@ -19,7 +19,7 @@ cat <<EOF > doxygen_tmp.in
 PROJECT_NAME = ${PROJECT_NAME}
 INPUT = ${PROJECT_PATH}/
 # FILE_PATTERNS = *.hh *.cc *.h *.c *.hpp *.cpp *.tcc
-EXCLUDE_PATTERNS = */test/* */unittest/* */tests/* */unittests/* */env/include/* */env/lib/*
+EXCLUDE_PATTERNS = */test/* */unittest/* */tests/* */unittests/* */env/include/* */env/lib/* */node_modules/*
 OUTPUT_DIRECTORY = ${OUTPUT_DIR}
 RECURSIVE = YES
 HAVE_DOT = YES

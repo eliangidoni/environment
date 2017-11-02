@@ -1,5 +1,5 @@
 {
-	"isearch_current": 59,
+	"isearch_current": 61,
 	"items":
 	[
 		"paypaloper",
@@ -61,8 +61,8 @@
 		"for_apple",
 		"assertion",
 		"use_cache",
-		"merchant",
-		"void_auth",
+		"logger.",
+		"logger",
 		"args",
 		"captureargs",
 		"capture_args"

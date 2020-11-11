@@ -15,7 +15,7 @@ for i in *; do
 				git checkout $CUR_BRANCH;
 			fi
 		fi
+		cd ..;
 	fi
-	cd ..;
 done
 
